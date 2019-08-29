@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>92bacfb8-4d4b-48ff-a02f-8b76439d8506</versionUuid>
+  <site a:uuid="f604b199-4d4e-4548-b84a-ed7ca04570af" name="Customer">
+    <description/>
+    <urlStub>testing</urlStub>
+    <page>
+      <staticName>Action</staticName>
+      <description/>
+      <urlStub>action</urlStub>
+      <uiObject a:uuid="0002e272-5561-8000-23f0-014d98014d98" xsi:type="a:ProcessModel"/>
+      <iconId>f000</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>STANDARD</pageWidth>
+    </page>
+    <visibility>268435456</visibility>
+    <headerBackgroundColor/>
+    <selectedTabBackgroundColor/>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <faviconHref/>
+    <logoRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_LOGO" xsi:type="a:CollaborationDocument"/>
+    <logoHref/>
+    <headerBackgroundColorExpr/>
+    <selectedTabBackgroundColorExpr/>
+    <accentColor/>
+    <accentColorExpr/>
+    <logoExpr/>
+    <faviconExpr/>
+    <showName>false</showName>
+    <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
+    <showRecordNews>true</showRecordNews>
+  </site>
+  <roleMap/>
+  <history>
+    <historyInfo versionUuid="92bacfb8-4d4b-48ff-a02f-8b76439d8506"/>
+  </history>
+</siteHaul>

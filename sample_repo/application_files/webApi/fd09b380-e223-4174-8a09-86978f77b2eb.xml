@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>d5a5a24d-9518-4c5d-b46f-86ecf4874af4</versionUuid>
+    <webApi a:uuid="fd09b380-e223-4174-8a09-86978f77b2eb" name="AAAA">
+        <a:description></a:description>
+        <a:expression></a:expression>
+        <a:urlAlias>ARKjUQ</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap/>
+    <history>
+        <historyInfo versionUuid="d5a5a24d-9518-4c5d-b46f-86ecf4874af4"/>
+    </history>
+</webApiHaul>

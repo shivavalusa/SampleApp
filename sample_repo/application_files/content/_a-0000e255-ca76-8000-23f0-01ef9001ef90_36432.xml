@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_36459</versionUuid>
+    <rule>
+        <name>testing_Interface</name>
+        <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_36432</uuid>
+        <description></description>
+        <parentUuid>_a-0000e236-2108-8000-23f0-01ef9001ef90_23259</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!name,
+  local!qal,
+  local!pref,
+  local!sub,
+#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Form",
+  contents: {
+    #"SYSTEM_SYSRULES_boxLayout"(
+      label: "Box",
+      contents: {},
+      style: "STANDARD",
+      marginBelow: "STANDARD"
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label:"Name",
+                  value:local!name,
+                  saveInto: local!name,
+                  validations:if(len(local!name)&gt;5,"Name should be less then 4 chars",{})
+                ),
+                 #"SYSTEM_SYSRULES_dateField"(
+                  label:"JoiningDate",
+                  value:local!pref,
+                  saveInto: local!pref,
+                  validations: if(
+                    todate(local!pref)&lt;today(),
+                    "Date should not be less than today",
+                    {}
+                  )
+                )
+              }
+            )
+            
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label:"qual",
+                  value:local!qal,
+                  saveInto: local!qal,
+                   validations:if(len(local!qal)&gt;5,"qual should be less then 4 chars",{})
+                  
+                ),
+                 #"SYSTEM_SYSRULES_textField"(
+                  label:"Subject",
+                  value:local!sub,
+                  saveInto: local!sub,
+                   validations:if(len(local!sub)&gt;5,"sub should be less then 4 chars",{})
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "NORMAL",
+        validate: false
+      )
+    }
+  )
+)
+)</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_36459"/>
+    </history>
+</contentHaul>
